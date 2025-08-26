@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Sidodadi | Deli Serdang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .running-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 18s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .nav-link { position: relative; padding-bottom: 4px; transition: color 0.3s ease; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; background: white;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .active { color: yellow !important; font-weight: 600; }
+    .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 1s ease-out, transform 1s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-gray-100 pt-32"> <!-- padding top untuk header fixed -->
+
+<!-- HEADER -->
+<header class="bg-blue-600 text-white py-3 shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Lambang Kabupaten Deli Serdang" 
+        class="rounded-full border-2 border-white w-16 h-16">
+      <div>
+        <h1 class="text-xl font-bold">DESA SIDODADI</h1>
+        <p class="text-sm opacity-90">Kec. Sibiru-Biru, Kab. Deli Serdang</p>
+      </div>
+    </div>
+
+    <nav class="hidden md:block">
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#beranda" class="nav-link">Beranda</a></li>
+        <li><a href="#profil" class="nav-link">Profil</a></li>
+        <li><a href="#data" class="nav-link">Data</a></li>
+        <li><a href="#pelayanan" class="nav-link">Pelayanan</a></li>
+        <li><a href="#berita" class="nav-link">Berita</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <button class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <!-- Running text -->
+  <div class="running-text bg-yellow-400 text-black py-2 overflow-hidden">
+    <span>Merdeka bukan sekadar bebas dari penjajah, tapi bebas dari rasa malas dan takut maju. Mari rayakan kemerdekaan ini dengan aksi nyata. Indonesia Maju dimulai dari diri kita! HUT RI KE 80, MERDEKA!!!
+    </span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="beranda" class="h-screen flex items-center justify-center bg-cover bg-center text-white fade-in"
+  style="background-image: url('gambar/beranda.png');">
+  <div class="text-center">
+    <h2 class="hover:text-red-500 text-4xl md:text-6xl font-bold drop-shadow-lg">Selamat Datang di Desa Sidodadi</h2>
+    <p class="mt-4 text-lg md:text-xl">Membangun bersama untuk masa depan lebih baik</p>
+    <a href="#profil" class="mt-6 inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Lihat Profil Desa</a>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="py-16 bg-gray-50 fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Galeri Desa</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <img src="gambar/panorama1.png" class="rounded-lg shadow-md hover:scale-105 transition">
+      <img src="gambar/panorama2.png" class="rounded-lg shadow-md hover:scale-105 transition">
+      <img src="gambar/panorama3.png" class="rounded-lg shadow-md hover:scale-105 transition">
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil" class="py-16 bg-white fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">Profil Desa</h2>
+    <p class="max-w-2xl mx-auto">Desa Sidodadi terletak di Kecamatan Sibiru-Biru, Kabupaten Deli Serdang. Desa ini kaya akan potensi pertanian, UMKM, budaya, dan sumber daya manusia. Warga Sidodadi hidup rukun dan bergotong royong dalam membangun desa.</p>
+  </div>
+</section>
+
+<!-- DATA -->
+<section id="data" class="py-16 bg-gray-50 fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Data Desa</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+        <h3 class="text-xl font-semibold">Jumlah Penduduk</h3>
+        <p class="text-2xl font-bold text-blue-600 mt-2">3,697 Jiwa</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+        <h3 class="text-xl font-semibold">Luas Wilayah</h3>
+        <p class="text-2xl font-bold text-blue-600 mt-2">12 km²</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+        <h3 class="text-xl font-semibold">Dusun</h3>
+        <p class="text-2xl font-bold text-blue-600 mt-2">4 Dusun</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PELAYANAN -->
+<section id="pelayanan" class="py-16 bg-white fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Layanan Desa</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-id-card text-3xl text-blue-600 mb-3"></i>
+        <h3 class="font-semibold">Administrasi</h3>
+        <p>Pembuatan KTP, KK, dan Akta Kelahiran</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-seedling text-3xl text-green-600 mb-3"></i>
+        <h3 class="font-semibold">Pertanian</h3>
+        <p>Bantuan & penyuluhan bagi petani</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-graduation-cap text-3xl text-purple-600 mb-3"></i>
+        <h3 class="font-semibold">Pendidikan</h3>
+        <p>Program pendidikan dan beasiswa desa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BERITA -->
+<section id="berita" class="py-16 bg-gray-50 fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Berita Terbaru</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-md">
+        <img src="gambar/panorama2.png" class="rounded mb-4">
+        <h3 class="font-semibold mb-2">Pelaksanaan Kegiatan Jalan santai</h3>
+        <p>Kegiatan jalan santai kelilingi Desa sidodadi pada tanggal 24 Agustus 2025 .</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-md">
+        <img src="gambar/gambar2.png" class="rounded mb-4">
+        <h3 class="font-semibold mb-2">Perlombaan Menghias gapura</h3>
+        <p>pelaksanaan perlombaan Menghias gapura yang di selenggarakan antar desa.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-md">
+        <img src="gambar/rapat.png" class="rounded mb-4">
+        <h3 class="font-semibold mb-2">Rapat Pelakasanaan 17 Agustus desa</h3>
+        <p>Rapat pelaksanaan 17 Agustus berlangsung di aula desa.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-md">
+        <img src="gambar/berita3.png" class="rounded mb-4">
+        <h3 class="font-semibold mb-2">Perkembangan UMKM</h3>
+        <p>Perkembangan UMKM desa yang baru ini sangat berkembang pesat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="py-16 bg-white fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Kontak Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-3xl text-red-600 mb-3"></i>
+        <h3 class="font-semibold">Alamat</h3>
+        <p>Jl. Desa Sidodadi No.1, Sibiru-Biru, Deli Serdang</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-phone text-3xl text-green-600 mb-3"></i>
+        <h3 class="font-semibold">Telepon</h3>
+        <p>+62_83187742626</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-envelope text-3xl text-blue-600 mb-3"></i>
+        <h3 class="font-semibold">Email</h3>
+        <p>desa.sidodadi@deliserdang.go.id</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-md">
+        <i class="fa-solid fa-globe text-3xl text-purple-600 mb-3"></i>
+        <h3 class="font-semibold">Website</h3>
+        <p><a href="https://sidodadi.deliserdang.go.id" class="text-blue-600 underline">sidodadi.deliserdang.go.id</a></p>
+      </div>
+    </div>
+    <div class="mt-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.108970982782!2d98.615!3d3.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3030c73faaaaaa%3A0x1111111111111111!2sSidodadi%2C%20Sibiru-Biru%2C%20Deli%20Serdang!5e0!3m2!1sid!2sid!4v1699999999999"
+        width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-blue-700 text-white py-6 mt-10">
+  <div class="container mx-auto px-4 text-center">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="#" class="hover:text-white-300 text-2xl"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="hover:text-pink-300 text-2xl"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-red-500 text-2xl"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" class="hover:text-green-300 text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 Desa Sidodadi, Kec. Sibiru-Biru, Kab. Deli Serdang. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        const headerOffset = 100;
+        const elementPosition = target.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    });
+  });
+
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 140;
+      if (pageYOffset >= sectionTop) { current = section.getAttribute("id"); }
+    });
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
